@@ -1,6 +1,6 @@
-var React = require('react-native');
+import React, {PropTypes} from 'react';
+import {NativeModules, requireNativeComponent, View} from 'react-native';
 
-var { NativeModules,requireNativeComponent,PropTypes,View} = React;
 
 var UIManager = NativeModules.UIManager;
 

@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {NativeModules, requireNativeComponent, View} from 'react-native';
+import ReactNative, {NativeModules, requireNativeComponent, View} from 'react-native';
 
 
 var UIManager = NativeModules.UIManager;
@@ -24,21 +24,21 @@ var WheelView = React.createClass({
     },
     previous(){
         UIManager.dispatchViewManagerCommand(
-            React.findNodeHandle(this.refs.wheel),
+            ReactNative.findNodeHandle(this.refs.wheel),
             UIManager.RCTWheelView.Commands.previous,
             null,
         );
     },
     next(){
         UIManager.dispatchViewManagerCommand(
-            React.findNodeHandle(this.refs.wheel),
+            ReactNative.findNodeHandle(this.refs.wheel),
             UIManager.RCTWheelView.Commands.next,
             null,
         );
     },
     snapTo(index){
         UIManager.dispatchViewManagerCommand(
-            React.findNodeHandle(this.refs.wheel),
+            ReactNative.findNodeHandle(this.refs.wheel),
             UIManager.RCTWheelView.Commands.snapTo,
             [index],
         );
